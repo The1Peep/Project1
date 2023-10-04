@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Lovers Club</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cat Lovers Club</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Featured Cats</h2>
+        <article>
+            <h3>Fluffy</h3>
+            <img src="fluffy.jpg" alt="Fluffy the cat">
+            <p>Fluffy is a cute and playful cat.</p>
+        </article>
+        <!-- Add more articles here -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Cat Lovers Club</p>
+    </footer>
+</body>
+<button id="styleToggle">Toggle Style</button>
+<script>
+    const styleToggle = document.getElementById('styleToggle');
+    let isMainStyle = true;
+
+    styleToggle.addEventListener('click', () => {
+        const linkElement = document.querySelector('link[href="main.css"]');
+        if (isMainStyle) {
+            linkElement.href = 'alternate.css';
+        } else {
+            linkElement.href = 'main.css';
+        }
+        isMainStyle = !isMainStyle;
+    });
+</script>
+</html>
